@@ -36,3 +36,6 @@ jobs:
           github-artifact-id:  "${{steps.upload-unsigned-artifact.outputs.artifact-id}}"
           artifact-configuration-slug: 'zipped'
           wait-for-completion: false
+
+      - name: Fails
+        run: exit 1 # Fails on purpose so that it can be re-tried
