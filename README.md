@@ -15,7 +15,7 @@ SignPath checks that the policies have been applied to the given branch. On the 
 For the `releases/interrupted-condition` branch, the ruleset has been temporarily disabled between 2024-12-12 11:07 UTC and 2024-12-23 09:07 UTC, allowing e.g. commits without code reviews. SignPath catches such interruptions and prevents the software from being signed.
 
 ### Prevention of re-runs
-See build [TODO](TODO) for an old failed build that has been re-run even though re-runs are not allowed. SignPath can optionally prevent re-runs to avoid situations where old, vulnerable states of the software are re-built and signed.
+Builds from the `releases/fails-for-retry` branch will always fail. When attempting to re-run it, SignPath will refuse to sign the software. SignPath can optionally prevent re-runs to avoid situations where old, vulnerable states of the software are re-built and signed.
 
 ## Prerequisites for Setup
 
