@@ -1,0 +1,5 @@
+# restrict the CODEOWNERS file itself
+CODEOWNERS @paul-team
+
+# restrict the policy definitions
+/.signpath/policies/ @paul-team
