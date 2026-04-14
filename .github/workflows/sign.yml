@@ -36,4 +36,13 @@ jobs:
           signing-policy-slug:  'release-signing'
           github-artifact-id:  "${{steps.upload-unsigned-artifact.outputs.artifact-id}}"
           skip-decompress: true
-          wait-for-completion: false
+          wait-for-completion: true
+          utput-artifact-directory: signed
+
+      - name: Upload unsigned artifact
+        uses: actions/upload-artifact@v7
+        with:
+          name: 'signed'
+          if-no-files-found: error
+          path: signed/random.dll
+          archive: false
