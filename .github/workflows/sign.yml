@@ -45,8 +45,7 @@ jobs:
       - name: Upload signed artifact
         uses: actions/upload-artifact@v7
         with:
-          name: 'signed'
+          name: 'signed2'
           if-no-files-found: error
           path: signed/random.dll
           archive: false
-          overwrite: true
