@@ -49,3 +49,4 @@ jobs:
           if-no-files-found: error
           path: signed/random.dll
           archive: false
+          overwrite: true
