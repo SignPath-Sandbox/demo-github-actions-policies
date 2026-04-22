@@ -40,12 +40,14 @@ jobs:
           output-artifact-directory: signed
 
       - name: test
-        run: ls -R
+        # due to a bug in GitHub, the filename needs to be unique across all uploads
+        # see https://github.com/actions/upload-artifact/issues/769
+        run: mv signed/random.dll signed/random-signed.dll
 
       - name: Upload signed artifact
         uses: actions/upload-artifact@v7
         with:
-          name: 'signed2'
+          name: 'signed'
           if-no-files-found: error
-          path: signed/random.dll
+          path: signed/random-signed.dll
           archive: false
