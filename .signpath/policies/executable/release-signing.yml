@@ -1,3 +1,3 @@
 github-build-policies:
   version: 1.0
-  disallow_reruns: false
+  disallow_reruns: true
