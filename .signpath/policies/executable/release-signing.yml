@@ -9,7 +9,7 @@ github-build-policies:
 github-scm-policies:
   version: '1.0'
   ruleset_constraints:
-  - enforced_from: EARLIEST # 2025-01-01
-    allow_bypass_actors: true
+  #- enforced_from: EARLIEST # 2025-01-01
+  - allow_bypass_actors: true
     rules:
       - type: non_fast_forward
