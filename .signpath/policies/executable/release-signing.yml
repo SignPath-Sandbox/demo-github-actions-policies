@@ -1,5 +1,5 @@
 # This is a policy file for the project 'executable' and the signing policy 'release-signing'
 
 github-build-policies:
-  version: '1.0'
+  version: 1.0
   invalid-key: abc
