@@ -1,3 +1,7 @@
 github-build-policies:
   version: 1.0
-  disallow_reruns: true
+  disallow_reruns: false
+  runners:
+    require_github_hosted: true
+    allowed_groups:
+      - Hardened Runners
