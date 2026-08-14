@@ -1,6 +1,6 @@
 github-build-policies:
   version: 1.0
-  disallow_reruns: false
+  disallow_reruns: true
   runners:
     require_github_hosted: true
     allowed_groups:
