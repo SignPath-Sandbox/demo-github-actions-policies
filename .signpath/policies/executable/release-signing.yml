@@ -1,7 +1,15 @@
 github-build-policies:
-  version: 1.0
+  version: '1.0'
   disallow_reruns: true
   runners:
     require_github_hosted: true
     allowed_groups:
-      - Hardened Runners
+      - GitHub Actions
+
+github-scm-policies:
+  version: '1.0'
+  ruleset_constraints:
+  - enforced_from: 2025-01-01
+    allow_bypass_actors: true
+    rules:
+      - type: non_fast_forward
