@@ -1,0 +1,16 @@
+github-build-policies:
+  version: 1.0
+  disallow_reruns: false
+
+github-scm-policies:
+  version: '1.0'
+  ruleset_constraints:
+    - allow_bypass_actors: true
+      rules: 
+      - type: non_fast_forward
+      - type: code_scanning
+        parameters:
+          code_scanning_tools:
+            - tool: CodeQL
+              alerts_threshold: errors
+              security_alerts_threshold: medium_or_higher
