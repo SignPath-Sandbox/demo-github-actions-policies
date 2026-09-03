@@ -4,7 +4,7 @@ github-build-policies:
 
 github-scm-policies:
   version: '1.0'
-  ruleset_constraints:
+  ruleset_constraintswithtypo :
     - allow_bypass_actors: true
       rules: 
       - type: non_fast_forward
